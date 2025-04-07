@@ -1,0 +1,55 @@
+.header-main{
+    position: relative;
+ 
+    .header{
+        padding: 16px 16px;
+    }
+    .nav{
+        gap: 32px;
+
+        li{
+            padding: 10px 0;
+        }
+
+        a{
+            color: $black;
+            @include text-style(500, 20px, 28px,0%);
+            text-align: center;
+            padding: 0;
+        }
+
+        .features-dropdown{
+            display: none;
+            position: absolute;
+            width: 120px;
+            top: 45px;
+            left: 0;
+            text-align: center;
+	        @include rounded(10px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            li{
+                // border-bottom: 1px solid rgb(0, 0, 0);
+                @include rounded(10px);
+                padding: 5px;
+            }
+            a{
+                color: rgb(46, 46, 46);
+            }
+        }
+    }
+
+    .feature{
+        position: relative;
+    }
+
+    .feature:hover .features-dropdown{
+            display: block;
+    }
+}
+
+.btn{
+    padding: 12px 40px;
+    text-align: center;
+    @include rounded(10px);
+    @include text-style(500, 16px, 28px,0%);
+}
